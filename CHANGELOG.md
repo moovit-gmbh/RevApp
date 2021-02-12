@@ -1,4 +1,4 @@
-# Helmut4 Changelog
+# RevApp Changelog
 
 All notable changes for the private product RevApp will be documented in this file.
 
