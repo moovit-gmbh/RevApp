@@ -12,6 +12,7 @@ All notable changes for the private product RevApp will be documented in this fi
 - Reset page of Active Directory browse dialog when browsing back and forth with the breadcrumb
 - Removing a namespace removes it also in from the "Select Namespace" dialog
 - Upload does not break up after 120 seconds
+- Fix upload for different storage paths (worker:1.0.0.1)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
