@@ -9,7 +9,13 @@ All notable changes for the private product RevApp will be documented in this fi
 - Add a change user password request on login view
   - User will receive a password reset email that leads him to a password reset page, where he can reset his password
 - Add audit logging in backend (backend:1.0.0.8)
-- Add browser support description and known issue with edge into the public github repo 
+- Add browser support description and known issue with edge into the public github repo
+- Add translation for the job access rights (frontend:1.0.0.10, backend:1.0.0.11)
+- Add endpoint for new Helmut Node (backend:1.0.0.11, streams: 4.0.4.105 (4.0.4-release-4))
+  - The node is a merged version of the two share nodes with a comma separated list of emails as input. The decision wheather a public link will be send or the assignment to 
+    an internal group is made RevApp internally 
+- Add "*" as indicator which language is currently active and fixed the english as master language setting update (frontend:1.0.0.10)
+- Add Endpoint for requesting the worker openapi documentation. It's reachable at <IP>/worker/v1/openapi.yaml (worker:1.0.0.3)
 ### Fixed
 - Reset page of Active Directory browse dialog when browsing back and forth with the breadcrumb
 - Removing a namespace removes it also in from the "Select Namespace" dialog
@@ -22,7 +28,8 @@ All notable changes for the private product RevApp will be documented in this fi
 - Add/Remove user to/from group will now update the frontend status properly (frontend:1.0.0.8)
 - Add more logging and improve error handling of worker (worker:1.0.0.2)
 - Fix Active Directory login into selected namespace (backend:1.0.0.9)
-- Placeholder appears after upload asset for users of type USER (frontend:1.0.0.8, backend::1.0.0.9)
+- Placeholder appears after upload asset for users of type USER (frontend:1.0.0.8, backend:1.0.0.9)
+- Search for emails and groups in edit users/ groups dialogs is now key insensitive (frontend:1.0.0.10)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
@@ -38,4 +45,7 @@ All notable changes for the private product RevApp will be documented in this fi
 - Login with email is now case-insensitive (backend:1.0.0.9)
 - Add query parameter "creator" to add job endpoint to enable overwriting creator when using third party (backend:1.0.0.9)
   - The creator must be a valid RevApp user
+- Simplified confirm dialog text by removing the object type attribute to make a proper translation more easy (frontend:1.0.0.10)
+  - There are two text fields around the keyword that could be used or let empty for translation (dialogs.confirm.textOne / textTwo)
+- Add job and overwrite creator: the value can be sAMAccountName that will be mapped to the mail address RevApp internally (backend:1.0.0.11)
 ### Removed
