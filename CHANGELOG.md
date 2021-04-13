@@ -40,6 +40,7 @@ All notable changes for the private product RevApp will be documented in this fi
 - Placeholder appears after upload asset for users of type USER (frontend:1.0.0.8, backend:1.0.0.9)
 - Search for emails and groups in edit users/ groups dialogs is now key insensitive (frontend:1.0.0.10)
 - Active Language will now be updated properly when the namespace is changed (frontend:1.0.0.11)
+- Fix parallel file upload (worker:1.0.0.4)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
