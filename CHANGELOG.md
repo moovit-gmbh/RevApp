@@ -41,6 +41,21 @@ All notable changes for the private product RevApp will be documented in this fi
 - Search for emails and groups in edit users/ groups dialogs is now key insensitive (frontend:1.0.0.10)
 - Active Language will now be updated properly when the namespace is changed (frontend:1.0.0.11)
 - Fix parallel file upload (worker:1.0.0.4)
+- Fix cleanup after deletion of a job or a namespace (backend:1.0.0.14)
+- Delete namespace will now be updated correctly so that a selection of the deleted namespace isn't possible anymore (frontend:1.0.0.12)
+- Fix the active directory browse dialog on first opening where it gets stuck in a loading state (frontend:1.0.0.12) 
+- Improve validation of every email provided in add public link dialog (frontend:1.0.0.12)
+  - previously it was possible to have only one email address correctly inserted
+- Improved public link behaviour on landing, page refresh and token error page (frontend:1.0.0.12)
+- Clicking on RevApp text at top left in the app bar will now navigates the user back to dashboard (frontend:1.0.0.12)
+- Fix share dialog error where items won't be displayed on dialog open (item.rights = undefined) (frontend:1.0.0.12)
+- Remove creator from share internal dialog that popped up whenever the search toolbar was used and did match with the creator email (frontend:1.0.0.12)
+- Add loading overlay after successful login to avoid short visibility of last session (frontend:1.0.0.12)
+- Fix email image appearance (backend:1.0.0.14)
+  - Completely remove RevApp logo whenever there is a custom logo defined
+  - Not resizing the custom logo so the aspect ratio do not get distorted
+  - Size of image is now defined by the image itself
+  - Shrinked the size of the heard in footer to be 32px and directly included it as base64 string into the email
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
@@ -69,4 +84,5 @@ All notable changes for the private product RevApp will be documented in this fi
   - If multiple users have the right to approve, the first one who approves locks his desition (approved or not approved). He will be the only person that 
     can unlock the state to initiate a reapproval. 
   - Both infos are presented in the gui as a lock sign with tooltip<>
+- Add more logging to the jobs/share endpoit to keep track of the input parameters (backend:1.0.0.14)
 ### Removed
