@@ -53,9 +53,17 @@ All notable changes for the private product RevApp will be documented in this fi
 - Add loading overlay after successful login to avoid short visibility of last session (frontend:1.0.0.12)
 - Fix email image appearance (backend:1.0.0.14)
   - Completely remove RevApp logo whenever there is a custom logo defined
-  - Not resizing the custom logo so the aspect ratio do not get distorted
+  - Resizing custom logo to 150px, larger logos might still be distorted
   - Size of image is now defined by the image itself
   - Shrinked the size of the heard in footer to be 32px and directly included it as base64 string into the email
+- AD users to group assingment now working properly (backend:1.0.0.16,frontend:1.0.0.13)
+  - Import users into group, remove user from group and reimport them will now readd users to revapp group
+- Change Worker preference request to avoid grabbing preferences from wrong namespace and improve error handling (frontend:1.0.0.13,worker:1.0.0.6)
+- Defined that usergroup rights weights more than normal group rights (backend:1.0.0.16,frontend:1.0.0.13)
+- Fix access rights setting whenever job right translations are not set for a custom language (backend:1.0.0.16,frontend:1.0.0.13) 
+- Add proper email input validation and avoid error page navigation when inserting invalid data in email field of login page (frontend:1.0.0.13)
+- Error where "x-webdoc" prefix is added to the link url of a mail can be avoided by providing the transfer protocol http:// or https://
+- Remove duplicate group assingment to jobs (backend:1.0.0.16)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
