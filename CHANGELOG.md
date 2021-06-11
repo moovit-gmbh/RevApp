@@ -64,6 +64,7 @@ All notable changes for the private product RevApp will be documented in this fi
 - Add proper email input validation and avoid error page navigation when inserting invalid data in email field of login page (frontend:1.0.0.13)
 - Error where "x-webdoc" prefix is added to the link url of a mail can be avoided by providing the transfer protocol http:// or https://
 - Remove duplicate group assingment to jobs (backend:1.0.0.16)
+- Send email to internal users or public link users when triggering it via API or Helmut RevApp nodes should now work properly (backend:1.0.0.17)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
@@ -93,4 +94,11 @@ All notable changes for the private product RevApp will be documented in this fi
     can unlock the state to initiate a reapproval. 
   - Both infos are presented in the gui as a lock sign with tooltip<>
 - Add more logging to the jobs/share endpoit to keep track of the input parameters (backend:1.0.0.14)
+- When using the Helmut upload to RevApp node the worker will fist check if the file is accessable and tries to skip the upload (worker:1.0.0.7)
+- When sharing via Helmut RevApp Share by Email node the email requestor will be overwritten with the creator of the job instead of using the API user (backend:1.0.0.17)
+- Security: 
+  - Removed external dependency requests (frontend:1.0.0.16)
+  - Not exposing account information on failed login attempts (frontend:1.0.0.16)
+  - Hide nginx server version (frontend:1.0.0.16)
+  - Add all security headers except Content-Security-Policy (frontend:1.0.0.16)
 ### Removed
