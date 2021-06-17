@@ -65,6 +65,9 @@ All notable changes for the private product RevApp will be documented in this fi
 - Error where "x-webdoc" prefix is added to the link url of a mail can be avoided by providing the transfer protocol http:// or https://
 - Remove duplicate group assingment to jobs (backend:1.0.0.16)
 - Send email to internal users or public link users when triggering it via API or Helmut RevApp nodes should now work properly (backend:1.0.0.17)
+- Make timecode in/outpoint badges of comments section more readable and fix issue where all timecode have been overwritten by edition one timecode of one comment (frontend:1.0.0.17, backend:1.0.0.18)
+- Avoid sending multiple mails when using api and assigning job to internal users (backend:1.0.0.18)
+- Redirect to login page when user gets unauthorized during application browse (frontend:1.0.0.17)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
@@ -101,4 +104,5 @@ All notable changes for the private product RevApp will be documented in this fi
   - Not exposing account information on failed login attempts (frontend:1.0.0.16)
   - Hide nginx server version (frontend:1.0.0.16)
   - Add all security headers except Content-Security-Policy (frontend:1.0.0.16)
+- Change filename of downloaded video to be the job name (frontend:1.0.0.17)
 ### Removed
