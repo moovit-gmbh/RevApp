@@ -25,6 +25,10 @@ All notable changes for the private product RevApp will be documented in this fi
   - Add Option to download the currently set image and to restore the default RevApp logo
   - Add Logo to Toolbar to make it more present
   - Add Logo to email template
+- Add searchbar to admin pages (namespaces, users and groups) (frontend:1.0.0.19, backend:1.0.0.19)
+- Add filter checkbox to filter out selected users/ groups in the corresponding edit dialogs and to the share dialog and sort by items that are selected or that have rights set (frontend:1.0.0.19, backend:1.0.0.19)
+- Add pagination options 15 - 101 to all table views (frontend:1.0.0.19, backend:1.0.0.19)
+- Add email light mode (frontend:1.0.0.19, backend:1.0.0.19) - deletion of existing preference entry EMAIL and restart of backend container required
 ### Fixed
 - Reset page of Active Directory browse dialog when browsing back and forth with the breadcrumb
 - Removing a namespace removes it also in from the "Select Namespace" dialog
