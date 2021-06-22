@@ -72,6 +72,8 @@ All notable changes for the private product RevApp will be documented in this fi
 - Make timecode in/outpoint badges of comments section more readable and fix issue where all timecode have been overwritten by edition one timecode of one comment (frontend:1.0.0.17, backend:1.0.0.18)
 - Avoid sending multiple mails when using api and assigning job to internal users (backend:1.0.0.18)
 - Redirect to login page when user gets unauthorized during application browse (frontend:1.0.0.17)
+- It's not possible anymore to set an outpoint before an inpoint (frontend:1.0.0.21, backend:1.0.0.21)
+- Refactored all password change pages and removed the requirement to apply old password on change whenever an admin user is logged in (frontend:1.0.0.21, backend:1.0.0.21)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
