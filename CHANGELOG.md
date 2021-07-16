@@ -90,6 +90,7 @@ All notable changes for the private product RevApp will be documented in this fi
     - Add selection indicator border
     - With shift + click multiple tiles can be selected
   - Fix multiselect top bar menu that does not disappear on scroll and fix it's selected jobs counter
+- Fix pagination (frontend:1.0.0.22, backend:1.0.0.23)
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
