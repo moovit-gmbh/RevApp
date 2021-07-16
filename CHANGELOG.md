@@ -29,6 +29,8 @@ All notable changes for the private product RevApp will be documented in this fi
 - Add filter checkbox to filter out selected users/ groups in the corresponding edit dialogs and to the share dialog and sort by items that are selected or that have rights set (frontend:1.0.0.19, backend:1.0.0.19)
 - Add pagination options 15 - 101 to all table views (frontend:1.0.0.19, backend:1.0.0.19)
 - Add email light mode (frontend:1.0.0.19, backend:1.0.0.19) - deletion of existing preference entry EMAIL and restart of backend container required
+- Add a "copy to clipboard" action for the public link into the context menu of the share dialog for public links (frontend:1.0.0.22)
+- Add a new quick view and approve dialog that can be accessed via tile view by selecting one tile and hit the space bar (frontend:1.0.0.22)
 ### Fixed
 - Reset page of Active Directory browse dialog when browsing back and forth with the breadcrumb
 - Removing a namespace removes it also in from the "Select Namespace" dialog
@@ -74,6 +76,20 @@ All notable changes for the private product RevApp will be documented in this fi
 - Redirect to login page when user gets unauthorized during application browse (frontend:1.0.0.17)
 - It's not possible anymore to set an outpoint before an inpoint (frontend:1.0.0.21, backend:1.0.0.21)
 - Refactored all password change pages and removed the requirement to apply old password on change whenever an admin user is logged in (frontend:1.0.0.21, backend:1.0.0.21)
+- Fixed skip upload feature for the Revapp Upload Asset Action node (worker:1.0.0.8)
+- Fixed multiple email sending whenever the rights of an job gets changed (backend:1.0.0.23)
+- Overwriting creator in email now also possible for public link sharing (backend:1.0.0.23)
+- Search fields now not case sensitive with upper cases (frontend:1.0.0.22)
+- Users with SHARE rights are now actually able to share an asset (backend:1.0.0.23)
+- Changed timestamp field of audit logging database entry to be a date and added database index for that (backend:1.0.0.23)
+- Fixed namespace filter for message bus update of add job (frontend:1.0.0.22)
+- When changing the language back to master language English the rights where not translated correctly and therefore the switches did not display any rights -> fixed with(frontend:1.0.0.22)
+- Several multiselect refactorings (frontend:1.0.0.22)
+  - Fix multiselect checkbox behaviour of list view
+  - Add multiselect for tile view
+    - Add selection indicator border
+    - With shift + click multiple tiles can be selected
+  - Fix multiselect top bar menu that does not disappear on scroll and fix it's selected jobs counter
 ### Changed
 - Change upload to be direct upload to storage rather than upload to temp folder and move to storage
 - Refactor whole user interface and made it mobile ready
@@ -111,4 +127,8 @@ All notable changes for the private product RevApp will be documented in this fi
   - Hide nginx server version (frontend:1.0.0.16)
   - Add all security headers except Content-Security-Policy (frontend:1.0.0.16)
 - Change filename of downloaded video to be the job name (frontend:1.0.0.17)
+- Block right click context menu on video in detail page to avoid direct download (frontend:1.0.0.22)
+- Change basket icon to cancel icon for cancelation of edit / reply process in comments section to avoid misleading expectation that comments can be deleted (frontend:1.0.0.22)
+- Added hover effect to table rows (frontend:1.0.0.22)
+- Enlarged title in player (frontend:1.0.0.22)
 ### Removed
