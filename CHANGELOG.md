@@ -2,7 +2,11 @@
 
 All notable changes for the private product RevApp will be documented in this file.
 
-## [development release]
+## [05.06.2024]
+### Fixed
+- Improve video download behaviour (frontend:1.0.0.24)
+
+## [initial release]
 ### Added
 - Add support for basic auth
 - Set display limitation parameter to have folowing posibile values 15, 25 ,50 ,75 ,101 for each table view
