@@ -2,6 +2,37 @@
 
 All notable changes for the private product RevApp will be documented in this file.
 
+## [24.09.2024]
+worker: 1.0.2.6
+backend: 1.0.2.7
+frontend: 1.0.2.3
+
+### Fixed
+- Search for job names that have special chars
+- Token error on first external link loading
+- Namespace sorting is now alphabetical
+- Optimize ui breakpoint for ipad
+- Allow frame stepping in video player
+- Missing comments after detail page refresh
+
+
+### Added
+- Add possibility to transfer preferences between namespaces
+- Add folder support and navigation
+- Add move + copy of jobs from + into folders
+- Add breadcrumb of job to detail view
+- Add multiselect option for job sharing feature
+- Add a view that shows all existing users and groups of current namespace
+- Add global generic search endpoint for jobs
+- Add script to retrieve external dependency list for all microservices
+
+### Changed
+- Completely reworked user roles
+- Support special chars for namespaces
+- Restrict namespace admin creation to other namespace admins
+- Don't show comments at all if right is not set (view was possible until now)
+- Restrict the user role to be able to do crud operations on folders
+
 ## [05.06.2024]
 ### Fixed
 - Improve video download behaviour (frontend:1.0.0.24)
