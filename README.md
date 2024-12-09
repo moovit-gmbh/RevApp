@@ -7,7 +7,7 @@ This is a public representation for the private product RevApp by [MoovIT GmbH](
 
 
 ### Known issues
-- Edge -> Frontend update over massage bus not working
+- Edge -> Frontend update over message bus not working
 - Chrome version 86 on windows -> No spinning wheel on download button click
 
 
